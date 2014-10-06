@@ -118,10 +118,12 @@ public class Node {
 		return value;
 	}
 	
+	//#### toString Methoden #####
 	@Override
 	public String toString() {
-		return value + " [" + 
-				(leftChild == null ? "[]" : leftChild) + ", " + 
-				(rightChild == null ? "[]" : rightChild) + "]";
+		return value + (isLeaf() ? "" : " [" + 
+				(leftChild == null ? "[]" : leftChild) + ", " +
+				(rightChild == null ? "[]" : rightChild) + 
+				"]");
 	}
 }
