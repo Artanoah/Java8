@@ -30,6 +30,26 @@ public class MathUtilities {
 		return akku;
 	}
 	
+	/**
+	 * <p>Differentiates the binary tree of Nodes. The argument root is changed in the prozess and returned in the end.</p>
+	 * 
+	 * <p>Working rules:
+	 * <ul>
+	 * 		<li>sumrule</li>
+	 * 		<li>productrule</li>
+	 * 		<li>divisionrule</li>
+	 * 		<li>chainrule</li>
+	 * </ul></p>
+	 * 
+	 * 	<p>Working functions:
+	 *  <ul>
+	 * 		<li>sin</li>
+	 * 		<li>cos</li>
+	 * 		<li>standart-operators (+, -, *, /)</li>
+	 * </ul></p>
+	 * @param root Tree (function) to be differentiated
+	 * @return differentiated root
+	 */
 	public static Node differentiate(Node root) {
 		if(root.getValue().equals("+") || root.getValue().equals("-")) {	//Summenregel aufrufen
 			root.applyOnNode(node -> {
@@ -82,10 +102,29 @@ public class MathUtilities {
 				return node;
 			});
 		} else {															//Funktionsregel aufrufen
+			switch (root.getValue()) {
+				case "sin": root.setValue("cos");
+							break;
+				case "cos": root.setValue("-sin");
+							break;
+				case "-sin": root.setValue("-cos");
+							break;
+				case "-cos": root.setValue("sin");
+							break;
+				default:	root.setValue("'" + root.getValue());
+			}
 			
+			root.applyOnNode(node -> {										//Kettenregel
+				Node left = new Node(node);
+				Node right = new Node(node.getLeftChild() == null ? new Node(node.getRightChild()) : new Node(node.getLeftChild()));
+				
+				root.setLeftChild(left);
+				root.setRightChild(differentiate(right));
+				root.setValue("*");
+				return root;
+			});
 		}
 		
 		return root;
 	}
-	//Kettenregel, Produktregel, Summenregel
 }
