@@ -22,6 +22,14 @@ public class Collections {
 		System.out.println("--------------");
 	}
 
+	/**
+	 * Führt die Methode "filter" auf einer LinkedList
+	 * von zufällig generierten Zahlen aus, misst
+	 * die Laufzeit und vergleicht diese mit einer
+	 * vergleichbaren Operation, die Iteratoren verwendet.
+	 *
+	 * @param amount Die Anzahl von Zahlen, die generiert werden soll.
+	 */
 	public static void testFilter(int amount) {
 		List<Integer> randomNumbers = generateRandomNumbers(amount);
 
@@ -43,6 +51,14 @@ public class Collections {
 	}
 
 
+	/**
+	 * Führt die Methode "map" auf einem TreeSet
+	 * von zufällig generierten Zahlen aus, misst
+	 * die Laufzeit und vergleicht diese mit einer
+	 * vergleichbaren Operation, die Iteratoren verwendet.
+	 *
+	 * @param amount Die Anzahl von Zahlen, die generiert werden soll.
+	 */
 	public static void testMap(int amount) {
 		List<Integer> randomNumbers = generateRandomNumbers(amount);
 
@@ -62,6 +78,14 @@ public class Collections {
 		System.out.println("iterator time:   " + duration2);
 	}
 
+	/**
+	 * Führt die Methode "forEach" auf einer ArrayList
+	 * von zufällig generierten Zahlen aus, misst
+	 * die Laufzeit und vergleicht diese mit einer
+	 * vergleichbaren Operation, die Iteratoren verwendet.
+	 *
+	 * @param amount Die Anzahl von Zahlen, die generiert werden soll.
+	 */
 	public static void testForEach(int amount) {
 		List<Integer> randomNumbers = generateRandomNumbers(amount);
 
@@ -81,6 +105,14 @@ public class Collections {
 		System.out.println("iterator time:       " + duration2);
 	}
 
+	/**
+	 * Führt die Methode "reduce" auf einer ArrayList
+	 * von zufällig generierten Zahlen aus, misst
+	 * die Laufzeit und vergleicht diese mit einer
+	 * vergleichbaren Operation, die Iteratoren verwendet.
+	 *
+	 * @param amount Die Anzahl von Zahlen, die generiert werden soll.
+	 */
 	public static void testReduce(int amount) {
 		List<Integer> randomNumbers = generateRandomNumbers(amount);
 
@@ -99,6 +131,14 @@ public class Collections {
 		System.out.println("iterator time:      " + duration2);
 	}
 
+	/**
+	 * Führt die Methode "filter" auf einer CopyOnWriteArrayList
+	 * von zufällig generierten Zahlen aus, misst
+	 * die Laufzeit und vergleicht diese mit einer
+	 * vergleichbaren Operation, die Iteratoren verwendet.
+	 *
+	 * @param amount Die Anzahl von Zahlen, die generiert werden soll.
+	 */
 	public static void testRemoveIf(int amount) {
 		List<Integer> randomNumbers = generateRandomNumbers(amount);
 
