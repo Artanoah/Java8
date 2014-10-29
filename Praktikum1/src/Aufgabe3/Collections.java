@@ -1,8 +1,12 @@
-package aufgabe1;
+package Aufgabe3;
 
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+/**
+ * @author Maximilian Heinrich Zender
+ * @author Hector Smith
+ */
 public class Collections {
 	public static void main(String[] args) {
 		testForEach(100);

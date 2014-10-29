@@ -2,6 +2,9 @@ package Tree;
 
 import java.util.function.*;
 
+/**
+ * @author Steffen Giersch
+ */
 public class Node {
 	
 	private String value;

@@ -4,6 +4,9 @@ import java.util.function.Function;
 
 import Tree.Node;
 
+/**
+ * @author Steffen Giersch
+ */
 public class MathUtilities {
 	
 	/**

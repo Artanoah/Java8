@@ -6,6 +6,13 @@ import java.awt.event.ActionListener;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * @author Maximilian Heinrich Zender
+ * @author Hector Smith
+ * @author Steffen Giersch
+ * @author Hendrik Albers
+ * @author Jeremias Jonathan Twele
+ */
 public class FunctionalInterfaces {
 
 	public static void main(String[] args) {
