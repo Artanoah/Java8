@@ -22,8 +22,9 @@ public class MethodsTimer {
 			for (int size = 1;size <= MAXIMUM_SIZE;size*=10){
 				MethodTimer r = new MethodTimer(size,each);
 				r.run();
-				System.out.printf(Locale.GERMAN, "Time in ms: %,2f\t\t", r.getMethodTime());
-				System.out.println("Memory usage in bytes:" + r.getMethodMemoryUsage() + "\t\t\n");
+				System.out.printf(Locale.GERMAN, "Time in ms: %,2f\n", r.getMethodTime());
+				System.out.println("Memory usage in bytes:" + r.getMethodMemoryUsage());
+				System.out.println("CPU time in ms:" + r.getMethodCPUTime() + "\n");
 			}
 			System.out.println();
 		}

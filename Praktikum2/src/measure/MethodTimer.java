@@ -18,6 +18,7 @@ public class MethodTimer {
 	private final Method method;
 	private Object instance;
 	private long totalTime;
+	private long cpuTime;
 	private int iterations;
 	private MethodTimer overheadTimer;
 	public List<Long> memoryUsage;
@@ -44,7 +45,15 @@ public class MethodTimer {
 		return this.getAverageMemoryUsage() - overheadTimer.getAverageMemoryUsage();
 	}
 
-	private double getAverageMemoryUsage() {
+	double getMethodCPUTime() {
+		return this.getCPUTime() - overheadTimer.getCPUTime();
+	}
+
+	double getCPUTime() {
+		return cpuTime;
+	}
+
+	double getAverageMemoryUsage() {
 		Long totalMemoryUsage = memoryUsage.stream().reduce(0l, (a, b) -> a+b);
 		return totalMemoryUsage / this.iterations;
 	}
@@ -58,6 +67,7 @@ public class MethodTimer {
 			iterations*=2;
 		}
 		overheadTimer = new MethodTimer(iterations);
+		cpuTime = getCurrentCPUTime();
 	}
 
 	//Check for Correctness, is missing in Implemention Patterns
@@ -79,6 +89,9 @@ public class MethodTimer {
 
 	private long getCurrentMemoryUsage() {
 		return ManagementFactory.getMemoryMXBean().getHeapMemoryUsage().getUsed();
+	}
+	private long getCurrentCPUTime() {
+		return ManagementFactory.getThreadMXBean().getCurrentThreadCpuTime();
 	}
 
 	public static class Overhead{
