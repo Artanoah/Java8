@@ -31,7 +31,13 @@ java -jar target/benchmarks.jar «testobject»
 
 `«testobject»`: Regular expression to select a class to benchmark from the src/main/java/benchmarks folder.
 
-Example run with output to csv file:
+#### Test [Modes](https://stackoverflow.com/questions/24928922/jmh-what-does-the-score-value-mean):
+* `Throughput`: operations per unit of time
+* `AverageTime`: average time per per operation
+* `SampleTime`: samples the time for each operation
+* `SingleShotTime`: measures the time for a single operation
+
+Example run with output to csv file: <br/>
 `java -jar target/benchmarks.jar streamsVsFor -rf csv -rff test.csv -f 1 -i 8 -wi 8 -bm all`
 
 ## Eclipse Project
