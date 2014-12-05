@@ -1,19 +1,22 @@
 package streamsVsForEach;
 
+import io_manager.InputDataReader;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import benchmark.Constants;
+
 public class StreamTestObject {
-	private List<Integer> li = new ArrayList<Integer>();
+	private List<String> list = new ArrayList<>();
 	
-	public StreamTestObject(int size) {
-		for(int i = 0; i < size; i++) {
-			li.add((int) Math.random() * 1000);
-		}
+	public StreamTestObject(int size) throws IOException {
+		list = InputDataReader.readFileLines(Constants.sgbWords, size);
 	}
 	
 	public void streamBenchmark() {
-		li.stream().forEach(e -> Math.sqrt(e));
+		list.stream().forEach(e -> e.toUpperCase());
 	}
 
 }
