@@ -13,6 +13,13 @@
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `-Dversion=1.0 `
 
 ## Build and run
+To set maven to use java 8:
+* In Linux systems
+  * Create a `JAVA_HOME` system variable and set it to the java directory path.
+  * z.B. `JAVA_HOME=/opt/java/jdk1.8.0_25/jre/ `
+* Windows systems
+  * No idea
+
 In `jmh-benchmarks` directory:
 > `mvn clean install` <br/>
 > `java -jar target/benchmarks.jar «testobject»`
