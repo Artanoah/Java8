@@ -17,6 +17,7 @@ To set maven to use java 8:
 * In Linux systems
   * Create a `JAVA_HOME` system variable and set it to the java directory path.
   * z.B. `JAVA_HOME=/opt/java/jdk1.8.0_25/jre/ `
+  * Save it in `~/.mavenrc`
 * Windows systems
   * No idea
 
