@@ -14,7 +14,7 @@ http://openjdk.java.net/projects/code-tools/jmh/
 
 ## build and run
 in top directory:
-> mvn clean install
+> mvn clean install <br/>
 > java -jar target/benchmarks.jar «testobject»
 
 «testobject»: regular expression to select a class to benchmark from the src/main/java/benchmarks folder.
