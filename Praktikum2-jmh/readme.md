@@ -1,7 +1,7 @@
 # jmh Benchmarks for Java 8 Testobjects
 
 ## jmh website
-`http://openjdk.java.net/projects/code-tools/jmh/`
+http://openjdk.java.net/projects/code-tools/jmh/
 
 ## Maven archetype used to setup Project
 ```
@@ -14,7 +14,7 @@ mvn archetype:generate \
     -Dversion=1.0 
 ```
 
-## Build and run
+## Build and run (on commandline)
 To set maven to use java 8:
 * In Linux systems
   * Create a `JAVA_HOME` system variable and set it to the java directory path.
@@ -30,6 +30,9 @@ java -jar target/benchmarks.jar «testobject»
 ```
 
 `«testobject»`: Regular expression to select a class to benchmark from the src/main/java/benchmarks folder.
+
+Example run with output to csv file:
+`java -jar target/benchmarks.jar streamsVsFor -rf csv -rff test.csv -f 1 -i 8 -wi 8 -bm all`
 
 ## Eclipse Project
 Requires Maven plugin for eclipse. <br/>
