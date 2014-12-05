@@ -1,12 +1,10 @@
-package streamsVsForEach;
+package benchmarks.streamsVsForEach;
 
 import io_manager.InputDataReader;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import benchmark.Constants;
+import general.Constants;
 
 public class StreamTestObject {
 	private List<String> list = new ArrayList<>();
