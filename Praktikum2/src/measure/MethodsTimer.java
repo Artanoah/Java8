@@ -18,13 +18,13 @@ public class MethodsTimer {
 	}
 	public void report() throws Exception{
 		for (Method each : methods){
-			System.out.print(each.getName() + "\t");
+			System.out.print("\t##### " + each.getName() + " #####" + "\n\n");
 			for (int size = 1;size <= MAXIMUM_SIZE;size*=10){
 				MethodTimer r = new MethodTimer(size,each);
 				r.run();
-				System.out.printf(Locale.GERMAN, "Time in ms: %,2f\n", r.getMethodTime());
-				System.out.println("Memory usage in bytes:" + r.getMethodMemoryUsage());
-				System.out.println("CPU time in ms:" + r.getMethodCPUTime() + "\n");
+				System.out.printf(Locale.GERMAN, "Time in ms:            %15d\n", (int) r.getMethodTime());
+				System.out.printf(Locale.GERMAN, "Memory usage in bytes: %15d\n\n", (int) r.getMethodMemoryUsage());
+				//System.out.println("CPU time in ms:" + r.getMethodCPUTime() + "\n");
 			}
 			System.out.println();
 		}
