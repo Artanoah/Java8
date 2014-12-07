@@ -1,6 +1,9 @@
 jmh Benchmarks for Java 8 Testobjects
 =====================================
 
+output.csv - Data from a benchmark run
+output.pdf - generated charts
+
 jmh website
 -----------
 
@@ -27,8 +30,6 @@ To set maven to use java 8:
   -   Create a `JAVA_HOME` system variable and set it to the java directory path.
   -   z.B. `JAVA_HOME=/opt/java/jdk1.8.0_25/jre/` 
   -   Save it in `~/.mavenrc` 
--   Windows systems \
-  -   No idea
 
 
 In jmh-benchmarks directory:
