@@ -1,4 +1,4 @@
-package LambdaVSReflection;
+package lambdaVSReflection;
 
 import io_manager.InputDataReader;
 
