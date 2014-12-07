@@ -5,6 +5,7 @@ set style fill solid
 set style data histograms
 set boxwidth 0.8
 set grid
+set logscale y
 set xlabel "Dataset size"
 set ylabel yaxis
 
