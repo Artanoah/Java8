@@ -8,10 +8,13 @@ import java.util.List;
 
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Param;
+import org.openjdk.jmh.annotations.Scope;
+import org.openjdk.jmh.annotations.State;
 
+@State(Scope.Benchmark)
 public class LambdaTestObject {
 
-	@Param({"10", "100", "200", "400", "800"})
+	@Param({ "100", "1000", "10000", "100000" })
 	public int size;
 	
 	@Benchmark

@@ -9,7 +9,10 @@ import java.util.function.Function;
 
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Param;
+import org.openjdk.jmh.annotations.Scope;
+import org.openjdk.jmh.annotations.State;
 
+@State(Scope.Benchmark)
 public class LambdaRefTestObject {
 
 	private Function<String, String> f = (s -> s.toUpperCase());
