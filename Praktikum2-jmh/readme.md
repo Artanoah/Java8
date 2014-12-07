@@ -4,6 +4,7 @@
 http://openjdk.java.net/projects/code-tools/jmh/
 
 ## Maven archetype used to setup Project
+(just for your information, no need to run this again)
 ```
 mvn archetype:generate \
     -DinteractiveMode=false \
@@ -53,7 +54,7 @@ software needed:
 * Bash, split, head, cut
 
 Run the benchmarks, let it generate a file output.csv.<br/>
-Run the plot.sh bash script. It needs 2 parameters. The first parameter is the output.csv with the benchmark data, the second is the number of test objects (8 currently).
+Run the plot.sh bash script. It needs 2 parameters. The first parameter is the output.csv with the benchmark data, the second is the number of test objects (8 currently).<br/>
 `./plot.sh sample-output.csv 8`<br/>
 This creates a number of bar charts with gnuplot, called outputN.png.
 It will also create a number of files all beginning with mode-, these files are only needed for the gnuplot calls and can be deleted.
