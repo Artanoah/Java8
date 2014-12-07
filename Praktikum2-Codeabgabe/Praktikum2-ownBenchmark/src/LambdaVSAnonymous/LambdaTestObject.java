@@ -1,11 +1,14 @@
-package LambdaVSAnonymous;
-
+package LambdaVSAnonymous
 import benchmark.Constants;
 import io_manager.InputDataReader;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * @author 
+ */
+
 
 public class LambdaTestObject {
 
