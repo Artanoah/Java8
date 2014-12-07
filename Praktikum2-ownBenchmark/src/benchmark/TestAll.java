@@ -1,21 +1,34 @@
 package benchmark;
 
 import java.lang.reflect.Method;
-import java.lang.management.*;
-import java.util.Scanner;
 
+import measure.MethodsTimer;
+import parallelStreamsVSSerialStreams.ParallelStreamTestObject;
+import parallelStreamsVSSerialStreams.SerialStreamTestObject;
+import streamsVsForEach.ForEachTestObject;
+import streamsVsForEach.StreamTestObject;
 import LambdaVSAnonymous.AnonymousClassTestObject;
 import LambdaVSAnonymous.LambdaTestObject;
 import LambdaVSReflection.LambdaRefTestObject;
 import LambdaVSReflection.ReflectionLamTestObject;
-import parallelStreamsVSSerialStreams.ParallelStreamTestObject;
-import parallelStreamsVSSerialStreams.SerialStreamTestObject;
-import measure.MethodsTimer;
-import streamsVsForEach.ForEachTestObject;
-import streamsVsForEach.StreamTestObject;
 
+/**
+ * Hauptklasse des entwickelten Benchmarktools. </br>
+ * Diese Klasse ist der Einstiegspunkt fuer die Ausfuehrung der Benchmarks 
+ * und enthaelt eine main-Methode zum Starten des Benchmarks.
+ */
 public class TestAll {
 
+	/**
+	 * Hauptmethode des entwickelten Benchmarktools. </br>
+	 * Hier werden die zu testenden Methoden uebergeben. </br>
+	 * Weitere zu testende Methoden koennen im <code>Method[]
+	 * </code> namens <code>methods</code> uebergeben werden.
+	 * 
+	 * @param args Nicht verwendet
+	 * @throws Exception Koennen aus verschiedensten Gruenden geworfen 
+	 * werden die mit den verschiedenen Testmethoden zusammenhaengen.
+	 */
 	public static void main(String[] args) throws Exception {
 
 		Method[] methods = new Method[]{
