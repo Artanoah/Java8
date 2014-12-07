@@ -31,7 +31,8 @@ public class MethodsTimer {
 				int memoryUsage = (int) r.getMethodMemoryUsage();
 				System.out.printf(Locale.GERMAN, "Time in ms:            %15d\n", methodTime);
 				System.out.printf(Locale.GERMAN, "Memory usage in bytes: %15d\n\n", memoryUsage);
-
+				//System.out.println("CPU time in ms:" + r.getMethodCPUTime() + "\n");
+				
 				csvWriter.append(Integer.toString(methodTime));
 				csvWriter.append(Integer.toString(memoryUsage));
 				csvWriter.makeParagraph();
