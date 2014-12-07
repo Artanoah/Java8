@@ -23,15 +23,19 @@ public class MethodsTimer {
 		for (Method each : methods){
 			System.out.print("\t##### " + each.getName() + " #####" + "\n\n");
 			csvWriter.append(each.getName());
+			csvWriter.makeParagraph();
 			for (int size = 1;size <= MAXIMUM_SIZE;size*=10){
 				MethodTimer r = new MethodTimer(size,each);
 				r.run();
-				System.out.printf(Locale.GERMAN, "Time in ms:            %15d\n", (int) r.getMethodTime());
-				System.out.printf(Locale.GERMAN, "Memory usage in bytes: %15d\n\n", (int) r.getMethodMemoryUsage());
+				int methodTime = (int) r.getMethodTime();
+				int memoryUsage = (int) r.getMethodMemoryUsage();
+				System.out.printf(Locale.GERMAN, "Time in ms:            %15d\n", methodTime);
+				System.out.printf(Locale.GERMAN, "Memory usage in bytes: %15d\n\n", memoryUsage);
 				//System.out.println("CPU time in ms:" + r.getMethodCPUTime() + "\n");
 				
-				csvWriter.append(Integer.toString((int) r.getMethodTime()));
-				csvWriter.append(Integer.toString((int) r.getMethodMemoryUsage()));
+				csvWriter.append(Integer.toString(methodTime));
+				csvWriter.append(Integer.toString(memoryUsage));
+				csvWriter.makeParagraph();
 			}
 			System.out.println();
 			csvWriter.makeParagraph();
