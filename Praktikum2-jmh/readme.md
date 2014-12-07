@@ -39,6 +39,8 @@ java -jar target/benchmarks.jar «testobject»
 
 Example run with output to csv file: <br/>
 `java -jar target/benchmarks.jar streamsVsFor -rf csv -rff test.csv -f 1 -i 8 -wi 8 -bm all`
+to run tests for all testobjects: <br/>
+`java -jar target/benchmarks.jar .*TestObject -rf csv -rff test.csv -f 1 -i 8 -wi 8 -bm all`
 
 ## Eclipse Project
 Requires Maven plugin for eclipse. <br/>
