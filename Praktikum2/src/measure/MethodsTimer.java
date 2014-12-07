@@ -36,5 +36,6 @@ public class MethodsTimer {
 			System.out.println();
 			csvWriter.makeParagraph();
 		}
+		csvWriter.close();
 	}
 }
