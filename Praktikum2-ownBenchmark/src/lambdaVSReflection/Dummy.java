@@ -1,4 +1,4 @@
-package lambdaVSReflection;
+package LambdaVSReflection;
 
 /**
  * @author

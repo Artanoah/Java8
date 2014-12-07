@@ -1,4 +1,4 @@
-package lambdaVSAnonymous;
+package LambdaVSAnonymous;
 /**
  * @author 
  */
