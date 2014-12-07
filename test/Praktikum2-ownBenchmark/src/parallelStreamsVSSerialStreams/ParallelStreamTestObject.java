@@ -8,9 +8,8 @@ import java.util.List;
 
 import benchmark.Constants;
 
-public class SerialStreamTestObject {
+public class ParallelStreamTestObject {
 	private List<String> list = new ArrayList<>();
-	
 	
 	/**
 	 * Constructor
@@ -20,16 +19,15 @@ public class SerialStreamTestObject {
 	 * @param size The number of lines to be read
 	 * @throws IOException
 	 */
-	public SerialStreamTestObject(int size) throws IOException {
+	public ParallelStreamTestObject(int size) throws IOException {
 		list = InputDataReader.readFileLines(Constants.sgbWords, size);
 	}
 	
-
 	/**
 	 * Iterates through the list using forEach and call toUpperCase()
-	 * on each element using a serial stream
+	 * on each element using parallelStream
 	 */
-	public void serialStreamBenchmark() {
-		list.stream().forEach(e -> e.toUpperCase());
+	public void parallelStreamBenchmark() {
+		list.parallelStream().forEach(e -> e.toUpperCase());
 	}
 }
