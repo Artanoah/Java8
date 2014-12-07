@@ -27,6 +27,7 @@ public class TestAll {
 
 				SerialStreamTestObject.class.getMethod("serialStreamBenchmark", new Class[0]),
 				ParallelStreamTestObject.class.getMethod("parallelStreamBenchmark", new Class[0]),
+				
 				AnonymousClassTestObject.class.getMethod("anonymousClassBenchmark", new Class[0]),
 				LambdaTestObject.class.getMethod("lambdaBenchmark", new Class[0])
 				};
