@@ -17,11 +17,19 @@ public class LambdaRefTestObject {
 
 	private Function<String, String> f = (s -> s.toUpperCase());
 
+	/**
+	 * size is the number of lines to be read
+	 * The jmh benchmark will run a test for each value
+	 */
 	@Param({ "100", "1000", "10000", "100000", "1000000" })
 	public int size;
 		
+	/**
+	 * Iterates through the list using a for-loop and calls toUpperCase()
+	 * on each element using
+	 */
 	@Benchmark
-	public void forEachBenchmark() throws IOException {
+	public void lambdaBenchmark() throws IOException {
 		List<String> list = InputDataReader.readFileLines(Constants.sgbWords, size);
 		
 		for(int i = 0; i < list.size(); i++) {

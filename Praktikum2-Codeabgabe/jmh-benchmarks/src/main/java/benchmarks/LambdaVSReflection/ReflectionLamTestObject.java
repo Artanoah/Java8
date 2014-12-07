@@ -19,11 +19,18 @@ public class ReflectionLamTestObject {
 	private Object o;
 	private Method f;
 
+	/**
+	 * size is the number of lines to be read
+	 * The jmh benchmark will run a test for each value
+	 */
 	@Param({ "100", "1000", "10000", "100000", "1000000" })
 	public int size;
 		
+	/**
+	 * Iterates through the list using a for-loop and calls invoke each time.
+	 */
 	@Benchmark
-	public void forEachBenchmark() throws IOException, InstantiationException,
+	public void reflectionBenchmark() throws IOException, InstantiationException,
 			IllegalAccessException, NoSuchMethodException, SecurityException,
 			IllegalArgumentException, InvocationTargetException {
 		

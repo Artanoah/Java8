@@ -14,9 +14,17 @@ import org.openjdk.jmh.annotations.State;
 @State(Scope.Benchmark)
 public class ForEachTestObject {
 
+	/**
+	 * size is the number of lines to be read
+	 * The jmh benchmark will run a test for each value
+	 */
 	@Param({ "100", "1000", "10000", "100000", "1000000" })
 	public int size;
-	
+
+	/**
+	 * Iterates through the list using forEach and call toUpperCase()
+	 * on each element
+	 */
 	@Benchmark
 	public void forEachBenchmark() throws IOException {
 		List<String> list = InputDataReader.readFileLines(Constants.sgbWords, size);
