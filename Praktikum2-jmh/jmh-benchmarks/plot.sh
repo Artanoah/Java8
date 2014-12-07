@@ -16,21 +16,28 @@ awk -F, -f split-by-mode.awk -- $1
 # split each of those files so that there is a file per testobject
 for file in mode-*.csv
 do
-  split --number=l/$2 $file $file.
+  #split --number=l/$2 $file $file.
+  split --lines=4 $file $file.
 done
 
 # call the gnuplot script for 2 files each
+i=0
 for file in mode-*.csv.*
 do
   if [ -z $prev ]
   then
-    prev = $file
+    prev=$file
     continue
   fi
 
-  
+  ((i++))
+  outputfile="output$i.png"
+  plot1file=$prev
+  plot2file=$file
 
-  prev = $file
+  gnuplot -e "outputfile='$outputfile'; plot1file='$plot1file'; plot1title='$plot1title'; plot2file='$plot2file'; plot2title='$plot2title';" plot.gp
+
+  prev=""
 done
 
 #outputfile="output.png"
