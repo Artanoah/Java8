@@ -29,6 +29,11 @@ public class LambdaRefTestObject {
 	/**
 	 * Iterates through the list using a for-loop and calls toUpperCase()
 	 * on each element using
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
 	 */
 	public void lambdaBenchmark() {
 		for(int i = 0; i < list.size(); i++) {

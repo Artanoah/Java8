@@ -1,9 +1,5 @@
 package LambdaVSReflection;
 
-/**
- * @author
- */
-
 public class Dummy {
 	
 	/**

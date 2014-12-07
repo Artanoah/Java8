@@ -27,7 +27,7 @@ public class SerialStreamTestObject {
 
 	/**
 	 * Iterates through the list using forEach and call toUpperCase()
-	 * on each element using serial stream
+	 * on each element using a serial stream
 	 */
 	public void serialStreamBenchmark() {
 		list.stream().forEach(e -> e.toUpperCase());

@@ -1,8 +1,4 @@
 package LambdaVSAnonymous;
-/**
- * @author 
- */
-
 import benchmark.Constants;
 import io_manager.InputDataReader;
 
