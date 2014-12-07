@@ -17,7 +17,9 @@ awk -F, -f split-by-mode.awk -- $1
 for file in mode-*.csv
 do
   #split --number=l/$2 $file $file.
-  split --lines=4 $file $file.
+  totallines=`wc -l "$file" | cut -f1 -d ' '`
+  linesperfile=$(($totallines / $2))
+  split --lines=$linesperfile $file $file.
 done
 
 # call the gnuplot script for 2 files each
@@ -34,6 +36,8 @@ do
   outputfile="output$i.png"
   plot1file=$prev
   plot2file=$file
+  plot1title=`head -n1 "$prev" | cut -f1 -d' '`
+  plot2title=`head -n1 "$file" | cut -f1 -d' '`
 
   gnuplot -e "outputfile='$outputfile'; plot1file='$plot1file'; plot1title='$plot1title'; plot2file='$plot2file'; plot2title='$plot2title';" plot.gp
 

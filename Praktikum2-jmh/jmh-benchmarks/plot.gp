@@ -1,6 +1,6 @@
 #set datafile separator ","
 #set autoscale fix
-set key outside right center
+#set key outside right center
 set style fill solid
 set style data histograms
 set boxwidth 0.8
