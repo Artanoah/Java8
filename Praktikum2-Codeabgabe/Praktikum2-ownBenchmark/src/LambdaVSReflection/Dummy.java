@@ -1,4 +1,4 @@
-package LambdaVSReflection;
+package lambdaVSReflection;
 
 public class Dummy {
 	

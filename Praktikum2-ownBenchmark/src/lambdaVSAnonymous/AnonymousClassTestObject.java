@@ -1,15 +1,13 @@
 package lambdaVSAnonymous;
-/**
- * @author 
- */
 
-import benchmark.Constants;
 import io_manager.InputDataReader;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+
+import benchmark.Constants;
 
 public class AnonymousClassTestObject {
 
