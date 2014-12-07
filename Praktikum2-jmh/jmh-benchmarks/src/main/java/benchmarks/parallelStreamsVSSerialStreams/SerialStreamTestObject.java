@@ -14,7 +14,7 @@ import org.openjdk.jmh.annotations.State;
 @State(Scope.Benchmark)
 public class SerialStreamTestObject {
 
-	@Param({ "100", "1000", "10000", "100000" })
+	@Param({ "100", "1000", "10000", "100000", "1000000" })
 	public int size;
 		
 	@Benchmark

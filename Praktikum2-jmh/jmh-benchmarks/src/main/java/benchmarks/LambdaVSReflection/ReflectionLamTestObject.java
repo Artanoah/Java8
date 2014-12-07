@@ -19,7 +19,7 @@ public class ReflectionLamTestObject {
 	private Object o;
 	private Method f;
 
-	@Param({ "100", "1000", "10000", "100000" })
+	@Param({ "100", "1000", "10000", "100000", "1000000" })
 	public int size;
 		
 	@Benchmark
