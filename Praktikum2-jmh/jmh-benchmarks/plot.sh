@@ -38,8 +38,9 @@ do
   plot2file=$file
   plot1title=`head -n1 "$prev" | cut -f1 -d' '`
   plot2title=`head -n1 "$file" | cut -f1 -d' '`
+  yaxis=`head -n1 "$prev" | cut -f7 -d' '`
 
-  gnuplot -e "outputfile='$outputfile'; plot1file='$plot1file'; plot1title='$plot1title'; plot2file='$plot2file'; plot2title='$plot2title';" plot.gp
+  gnuplot -e "outputfile='$outputfile'; yaxis='$yaxis'; plot1file='$plot1file'; plot1title='$plot1title'; plot2file='$plot2file'; plot2title='$plot2title';" plot.gp
 
   prev=""
 done

@@ -5,6 +5,8 @@ set style fill solid
 set style data histograms
 set boxwidth 0.8
 set grid
+set xlabel "Dataset size"
+set ylabel yaxis
 
 set terminal png size 1024,768 enhanced font "Helvetica,20"
 set output outputfile
