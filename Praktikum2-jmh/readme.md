@@ -33,7 +33,7 @@ java -jar target/benchmarks.jar «testobject»
 
 #### Test [Modes](https://stackoverflow.com/questions/24928922/jmh-what-does-the-score-value-mean):
 * `Throughput`: operations per unit of time
-* `AverageTime`: average time per per operation
+* `AverageTime`: average time per operation
 * `SampleTime`: samples the time for each operation
 * `SingleShotTime`: measures the time for a single operation
 
