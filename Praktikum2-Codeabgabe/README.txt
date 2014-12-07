@@ -7,6 +7,6 @@
 
 Inhalt:
 /Praktikum2-ownBenchmark	-> Selbst erstellter Benchmark. Orientiert sich an der Vorgabe von ihnen.
-/Praktikum2-jmh			-> Automatisierter Benchmark mit der JMH-Bibliothek
+/jmh-benchmarks			-> Automatisierter Benchmark mit der JMH-Bibliothek
 
 Weitere Hinweise befinden sich in den README-Dateien in /Praktikum2-ownBenchmark und /Praktikum2-jmh
