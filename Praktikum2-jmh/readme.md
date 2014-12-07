@@ -38,10 +38,22 @@ java -jar target/benchmarks.jar «testobject»
 * `SingleShotTime`: measures the time for a single operation
 
 Example run with output to csv file: <br/>
-`java -jar target/benchmarks.jar streamsVsFor -rf csv -rff test.csv -f 1 -i 8 -wi 8 -bm all`
+`java -jar target/benchmarks.jar streamsVsFor -rf csv -rff output.csv -f 1 -i 8 -wi 8 -bm all`<br/>
 to run tests for all testobjects: <br/>
-`java -jar target/benchmarks.jar .*TestObject -rf csv -rff test.csv -f 1 -i 8 -wi 8 -bm all`
+`java -jar target/benchmarks.jar .*TestObject -rf csv -rff output.csv -f 1 -i 8 -wi 8 -bm all`
 
-## Eclipse Project
+## Open as Eclipse Project
 Requires Maven plugin for eclipse. <br/>
 Import project -> Maven -> Existing Maven Projects -> select `jmh-benchmarks` directory
+
+## create charts from output data
+software needed:
+* [GNU awk](https://www.gnu.org/software/gawk/) (gawk), has to be gawk because gensub function is used
+* [gnuplot](http://www.gnuplot.info/)
+* Bash, split, head, cut
+
+Run the benchmarks, let it generate a file output.csv.<br/>
+Run the plot.sh bash script. It needs 2 parameters. The first parameter is the output.csv with the benchmark data, the second is the number of test objects (8 currently).
+`./plot.sh sample-output.csv 8`<br/>
+This creates a number of bar charts with gnuplot, called outputN.png.
+It will also create a number of files all beginning with mode-, these files are only needed for the gnuplot calls and can be deleted.
