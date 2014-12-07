@@ -14,7 +14,7 @@ import org.openjdk.jmh.annotations.State;
 @State(Scope.Benchmark)
 public class ForEachTestObject {
 
-    @Param({"10", "100", "200", "400", "800"})
+	@Param({ "100", "1000", "10000", "100000" })
 	public int size;
 	
 	@Benchmark
