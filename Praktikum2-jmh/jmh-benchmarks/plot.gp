@@ -1,4 +1,4 @@
-set datafile separator ","
+#set datafile separator ","
 #set autoscale fix
 set key outside right center
 set style fill solid
