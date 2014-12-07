@@ -2,15 +2,15 @@ package benchmark;
 
 import java.lang.reflect.Method;
 
+import lambdaVSAnonymous.AnonymousClassTestObject;
+import lambdaVSAnonymous.LambdaTestObject;
+import lambdaVSReflection.LambdaRefTestObject;
+import lambdaVSReflection.ReflectionLamTestObject;
 import measure.MethodsTimer;
 import parallelStreamsVSSerialStreams.ParallelStreamTestObject;
 import parallelStreamsVSSerialStreams.SerialStreamTestObject;
 import streamsVsForEach.ForEachTestObject;
 import streamsVsForEach.StreamTestObject;
-import LambdaVSAnonymous.AnonymousClassTestObject;
-import LambdaVSAnonymous.LambdaTestObject;
-import LambdaVSReflection.LambdaRefTestObject;
-import LambdaVSReflection.ReflectionLamTestObject;
 
 /**
  * Hauptklasse des entwickelten Benchmarktools. </br>
