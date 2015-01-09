@@ -25,7 +25,7 @@ public class LambdaRefTestObject {
 	 * size is the number of lines to be read
 	 * The jmh benchmark will run a test for each value
 	 */
-	@Param({ "100", "1000", "10000", "100000", "1000000" })
+    @Param({ "100", "1000", "10000", "100000", "1000000", "10000000" })
 	public int size;
 		
 	/**
