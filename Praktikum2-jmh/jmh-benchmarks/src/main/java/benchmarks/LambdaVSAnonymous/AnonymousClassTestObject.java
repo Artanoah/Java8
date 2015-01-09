@@ -4,6 +4,7 @@ import general.Constants;
 import io_manager.InputDataReader;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -31,14 +32,17 @@ public class AnonymousClassTestObject {
 	 * on each element within an anonymousClass
 	 */
 	@Benchmark
-	public void anonymousClassBenchmark() throws IOException {
+	public List<String> anonymousClassBenchmark() throws IOException {
 		List<String> list = InputDataReader.readFileLines(Constants.sgbWords, size);
-
+		List<String> result = new ArrayList<>(size);
+		
 		list.forEach(new Consumer<String>() {
 			@Override
 			public void accept(String s) {
-				s.toUpperCase();
+				result.add(s.toUpperCase());
 			}
 		});
+		
+		return result;
 	}
 }

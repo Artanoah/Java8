@@ -6,6 +6,7 @@ import io_manager.InputDataReader;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openjdk.jmh.annotations.Benchmark;
@@ -34,12 +35,13 @@ public class ReflectionLamTestObject {
 	 * Iterates through the list using a for-loop and calls invoke each time.
 	 */
 	@Benchmark
-	public void reflectionBenchmark() throws IOException, InstantiationException,
+	public List<String> reflectionBenchmark() throws IOException, InstantiationException,
 			IllegalAccessException, NoSuchMethodException, SecurityException,
 			IllegalArgumentException, InvocationTargetException {
 		
 		//	Initialize
 		List<String> list = InputDataReader.readFileLines(Constants.sgbWords, size);
+        List<String> result = new ArrayList<>(size);
 		
 		o = Dummy.class.newInstance();
 		
@@ -51,7 +53,9 @@ public class ReflectionLamTestObject {
 		
 		//	Test
 		for(int i = 0; i < list.size(); i++) {
-			f.invoke(o, list.get(i));
+			result.add((String) f.invoke(o, list.get(i)));
 		}
+		
+		return result;
 	}
 }

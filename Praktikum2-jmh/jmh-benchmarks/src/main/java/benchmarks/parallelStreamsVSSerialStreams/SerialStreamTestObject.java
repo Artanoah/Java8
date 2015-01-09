@@ -4,6 +4,7 @@ import general.Constants;
 import io_manager.InputDataReader;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openjdk.jmh.annotations.Benchmark;
@@ -30,9 +31,12 @@ public class SerialStreamTestObject {
 	 * on each element using a serial stream
 	 */
 	@Benchmark
-	public void serialStreamBenchmark() throws IOException {
+	public List<String> serialStreamBenchmark() throws IOException {
 		List<String> list = InputDataReader.readFileLines(Constants.sgbWords, size);
-
-		list.stream().forEach(e -> e.toUpperCase());
+		List<String> result = new ArrayList<>(size);
+		
+		list.stream().forEach(e -> result.add(e.toUpperCase()));
+		
+		return result;
 	}
 }

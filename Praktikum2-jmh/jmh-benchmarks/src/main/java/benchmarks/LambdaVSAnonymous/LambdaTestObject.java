@@ -4,6 +4,7 @@ import general.Constants;
 import io_manager.InputDataReader;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openjdk.jmh.annotations.Benchmark;
@@ -30,9 +31,12 @@ public class LambdaTestObject {
 	 * on each element using LambdaExpression
 	 */
 	@Benchmark
-	public void lambdaBenchmark() throws IOException {
+	public List<String> lambdaBenchmark() throws IOException {
 		List<String> list = InputDataReader.readFileLines(Constants.sgbWords, size);
+        List<String> result = new ArrayList<>(size);
 
-		list.forEach(e -> e.toUpperCase());
+		list.forEach(e -> result.add(e.toUpperCase()));
+		
+		return result;
 	}
 }

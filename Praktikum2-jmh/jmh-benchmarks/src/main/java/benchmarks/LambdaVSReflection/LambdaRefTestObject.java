@@ -4,6 +4,7 @@ import general.Constants;
 import io_manager.InputDataReader;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
@@ -33,11 +34,14 @@ public class LambdaRefTestObject {
 	 * on each element using
 	 */
 	@Benchmark
-	public void lambdaBenchmark() throws IOException {
+	public List<String> lambdaBenchmark() throws IOException {
 		List<String> list = InputDataReader.readFileLines(Constants.sgbWords, size);
+        List<String> result = new ArrayList<>(size);
 		
 		for(int i = 0; i < list.size(); i++) {
-			f.apply(list.get(i));
+			result.add(f.apply(list.get(i)));
 		}
+		
+		return result;
 	}
 }

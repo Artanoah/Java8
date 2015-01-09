@@ -4,6 +4,7 @@ import general.Constants;
 import io_manager.InputDataReader;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openjdk.jmh.annotations.Benchmark;
@@ -30,11 +31,14 @@ public class ForEachTestObject {
 	 * on each element
 	 */
 	@Benchmark
-	public void forEachBenchmark() throws IOException {
+	public List<String> forEachBenchmark() throws IOException {
 		List<String> list = InputDataReader.readFileLines(Constants.sgbWords, size);
+        List<String> result = new ArrayList<>(size);		
 
 		for (String element : list) {
-			element.toUpperCase();
+			result.add(element.toUpperCase());
 		}
+		
+		return result;
 	}
 }
