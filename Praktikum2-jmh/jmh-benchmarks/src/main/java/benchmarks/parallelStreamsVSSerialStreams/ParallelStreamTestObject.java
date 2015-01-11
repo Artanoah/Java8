@@ -25,7 +25,7 @@ public class ParallelStreamTestObject {
 	 * size is the number of lines to be read
 	 * The jmh benchmark will run a test for each value
 	 */
-    @Param({ "1000", "10000", "100000" })
+    @Param({ "100", "1000", "10000", "100000" })
 	public int size;
 	
 	List<String> list;
