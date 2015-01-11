@@ -1,9 +1,6 @@
 jmh Benchmarks for Java 8 Testobjects
 =====================================
 
-output.csv - Data from a benchmark run
-output.pdf - generated charts
-
 jmh website
 -----------
 
@@ -48,9 +45,9 @@ Test Modes:
 -   SingleShotTime: measures the time for a single operation
 
 Example run with output to csv file:
-java -jar target/benchmarks.jar streamsVsFor -rf csv -rff output.csv -f 1 -i 8 -wi 8 -bm all
+java -jar target/benchmarks.jar streamsVsFor -rf csv -rff output.csv -f 1 -i 5 -wi 5 -bm avgt
 to run tests for all testobjects:
-java -jar target/benchmarks.jar .*TestObject -rf csv -rff output.csv -f 1 -i 8 -wi 8 -bm all
+java -jar target/benchmarks.jar -rf csv -rff output.csv -f 1 -i 5 -wi 5 -bm avgt
 
 Open as Eclipse Project
 -----------------------

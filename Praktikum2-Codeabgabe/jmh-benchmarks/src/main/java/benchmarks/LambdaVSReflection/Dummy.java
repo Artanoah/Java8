@@ -1,5 +1,9 @@
 package benchmarks.LambdaVSReflection;
 
+/**
+ * @author Hendrik Albers, Steffen Giersch, Maximilian Heinrich, Hector Smith, Jeremias Twele
+ */
+
 public class Dummy {
 
 	/**
