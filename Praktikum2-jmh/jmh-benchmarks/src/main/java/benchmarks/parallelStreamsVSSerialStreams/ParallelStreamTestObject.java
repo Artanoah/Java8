@@ -18,7 +18,7 @@ import org.openjdk.jmh.annotations.Level;
  * @author Hendrik Albers, Steffen Giersch, Maximilian Heinrich, Hector Smith, Jeremias Twele
  */
 
-@State(Scope.Thread)
+@State(Scope.Benchmark)
 public class ParallelStreamTestObject {
 
 	/**

@@ -18,7 +18,7 @@ import org.openjdk.jmh.annotations.Level;
  * @author Hendrik Albers, Steffen Giersch, Maximilian Heinrich, Hector Smith, Jeremias Twele
  */
 
-@State(Scope.Thread)
+@State(Scope.Benchmark)
 public class SerialStreamTestObject {
 
 	/**
@@ -41,7 +41,7 @@ public class SerialStreamTestObject {
 	 * on each element using a serial stream
 	 */
 	@Benchmark
-	public List<String> serialStreamBenchmark() throws IOException {
+	public List<String> serialStreamBenchmark() {
 		List<String> result = new ArrayList<>(size);
 		
 		list.stream().forEach(e -> result.add(e.toUpperCase()));
