@@ -1,5 +1,0 @@
-"benchmarks.streamsVsForEach.StreamTestObject.streamBenchmark","thrpt",1,2,861.6796814272554,NaN,"ops/s","10"
-"benchmarks.streamsVsForEach.StreamTestObject.streamBenchmark","thrpt",1,2,875.0619847187895,NaN,"ops/s","100"
-"benchmarks.streamsVsForEach.StreamTestObject.streamBenchmark","thrpt",1,2,853.9823156806601,NaN,"ops/s","200"
-"benchmarks.streamsVsForEach.StreamTestObject.streamBenchmark","thrpt",1,2,872.8327139840168,NaN,"ops/s","400"
-"benchmarks.streamsVsForEach.StreamTestObject.streamBenchmark","thrpt",1,2,860.4483763474732,NaN,"ops/s","800"

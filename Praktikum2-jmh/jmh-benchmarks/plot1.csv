@@ -1,5 +1,0 @@
-"benchmarks.streamsVsForEach.ForEachTestObject.forEachBenchmark","thrpt",1,2,842.6678706728942,NaN,"ops/s","10"
-"benchmarks.streamsVsForEach.ForEachTestObject.forEachBenchmark","thrpt",1,2,837.4602474946955,NaN,"ops/s","100"
-"benchmarks.streamsVsForEach.ForEachTestObject.forEachBenchmark","thrpt",1,2,864.042416085269,NaN,"ops/s","200"
-"benchmarks.streamsVsForEach.ForEachTestObject.forEachBenchmark","thrpt",1,2,851.7408109393909,NaN,"ops/s","400"
-"benchmarks.streamsVsForEach.ForEachTestObject.forEachBenchmark","thrpt",1,2,858.1649745034663,NaN,"ops/s","800"
